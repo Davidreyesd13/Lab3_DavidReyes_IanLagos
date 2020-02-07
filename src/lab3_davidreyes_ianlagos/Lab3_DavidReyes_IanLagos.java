@@ -1,6 +1,9 @@
+
 package lab3_davidreyes_ianlagos;
 
 import java.util.Scanner;
+
+
 
 public class Lab3_DavidReyes_IanLagos {
 
@@ -27,7 +30,5 @@ public class Lab3_DavidReyes_IanLagos {
                     System.out.println("Opcion no valida");
             }
         }
-
     }
-
 }
