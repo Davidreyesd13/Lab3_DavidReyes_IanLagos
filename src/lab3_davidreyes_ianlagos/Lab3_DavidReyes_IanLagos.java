@@ -33,7 +33,6 @@ public class Lab3_DavidReyes_IanLagos {
                         case 1:
                             System.out.println("Ingrese cuantos jugadores quiere meter en su equipo");
                             int cont = leer.nextInt();
-                            ArrayList jugadores = new ArrayList();
                             while (cont < 5 || cont > 13) {
                                 if (cont < 5) {
                                     System.out.println("Muy pocos jugadores");
@@ -49,7 +48,7 @@ public class Lab3_DavidReyes_IanLagos {
                                 System.out.println("Ingrese Apellido");
                                 String apellido = leer.next();
                                 System.out.println("Años profesionles");
-                                int años = leer.nextInt();
+                                String años = leer.next();
                                 System.out.println("Ingrese el salario");
                                 double salario = leer.nextDouble();
                                 System.out.println("Ingrese numero de camisa");
@@ -60,8 +59,8 @@ public class Lab3_DavidReyes_IanLagos {
                                     System.out.println("No se puede menores que 0");
                                     System.out.println("Ingrese valor de tiro de 3");
                                     tiro3 = leer.nextInt();
-                                    
-                                }else if(tiro3>99){
+
+                                } else if (tiro3 > 99) {
                                     System.out.println("No se puede un numero mayor de 99");
                                     System.out.println("Ingrese valor de tiro de 3");
                                     tiro3 = leer.nextInt();
@@ -72,8 +71,8 @@ public class Lab3_DavidReyes_IanLagos {
                                     System.out.println("No se puede menores que 0");
                                     System.out.println("Ingrese valor de defensa");
                                     def = leer.nextInt();
-                                    
-                                }else if(def>99){
+
+                                } else if (def > 99) {
                                     System.out.println("No se puede un numero mayor de 99");
                                     System.out.println("Ingrese valor de defensa");
                                     def = leer.nextInt();
@@ -84,8 +83,8 @@ public class Lab3_DavidReyes_IanLagos {
                                     System.out.println("No se puede menores que 0");
                                     System.out.println("Ingrese valor de media");
                                     media = leer.nextInt();
-                                    
-                                }else if(media>99){
+
+                                } else if (media > 99) {
                                     System.out.println("No se puede un numero mayor de 99");
                                     System.out.println("Ingrese valor de media");
                                     media = leer.nextInt();
@@ -96,8 +95,8 @@ public class Lab3_DavidReyes_IanLagos {
                                     System.out.println("No se puede menores que 0");
                                     System.out.println("Ingrese valor de rebote");
                                     rebote = leer.nextInt();
-                                    
-                                }else if(def>99){
+
+                                } else if (def > 99) {
                                     System.out.println("No se puede un numero mayor de 99");
                                     System.out.println("Ingrese valor de rebote");
                                     rebote = leer.nextInt();
@@ -108,8 +107,8 @@ public class Lab3_DavidReyes_IanLagos {
                                     System.out.println("No se puede menores que 0");
                                     System.out.println("Ingrese valor de bandeja");
                                     bandeja = leer.nextInt();
-                                    
-                                }else if(bandeja>99){
+
+                                } else if (bandeja > 99) {
                                     System.out.println("No se puede un numero mayor de 99");
                                     System.out.println("Ingrese valor de bandeja");
                                     bandeja = leer.nextInt();
@@ -120,8 +119,8 @@ public class Lab3_DavidReyes_IanLagos {
                                     System.out.println("No se puede menores que 0");
                                     System.out.println("Ingrese valor de pases");
                                     pases = leer.nextInt();
-                                    
-                                }else if(pases>99){
+
+                                } else if (pases > 99) {
                                     System.out.println("No se puede un numero mayor de 99");
                                     System.out.println("Ingrese valor de pases");
                                     pases = leer.nextInt();
@@ -131,9 +130,9 @@ public class Lab3_DavidReyes_IanLagos {
                                 if (posteo < 0) {
                                     System.out.println("No se puede menores que 0");
                                     System.out.println("Ingrese valor de posteo");
-                                    posteo= leer.nextInt();
-                                    
-                                }else if(posteo>99){
+                                    posteo = leer.nextInt();
+
+                                } else if (posteo > 99) {
                                     System.out.println("No se puede un numero mayor de 99");
                                     System.out.println("Ingrese valor de posteo");
                                     posteo = leer.nextInt();
@@ -155,17 +154,18 @@ public class Lab3_DavidReyes_IanLagos {
                                         altura = 2.10;
                                         break;
                                     case 5:
-                                        altura =2.13;
+                                        altura = 2.13;
                                     default:
                                         System.out.println("Opcion no valida");
                                 }
-                               // jugadores.add(nombre,apellido,años,salario,camisa);
+                                
+                                personal.add(new Persona(nombre, apellido, años, salario).getJugador().add(new Jugador(camisa, tiro3, def, media, rebote, bandeja, pases, posteo, altura, nombre, apellido, años, salario)));
                             }
                             break;
                         default:
                             System.out.println("Opcion no valida");
                     }
-                    equipos.add(new Equipo(nombre, fecha, campeonatos,personal));
+                    equipos.add(new Equipo(nombre, fecha, campeonatos, personal));
                     break;
                 case 2:
                     break;
