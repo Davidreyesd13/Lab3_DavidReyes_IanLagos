@@ -8,6 +8,7 @@ public class Lab3_DavidReyes_IanLagos {
     public static void main(String[] args) {
 
         int opcion;
+        ArrayList<Equipo> equipos = new ArrayList();
         Scanner leer = new Scanner(System.in);
         while (true) {
             System.out.println("0.Salir"
@@ -19,6 +20,7 @@ public class Lab3_DavidReyes_IanLagos {
                 case 0:
                     System.exit(0);
                 case 1:
+                    ArrayList personal = new ArrayList();
                     System.out.println("Ingrese Nombre de equipo");
                     String nombre = leer.next();
                     System.out.println("Ingrese fecha de creacion");
@@ -31,6 +33,7 @@ public class Lab3_DavidReyes_IanLagos {
                         case 1:
                             System.out.println("Ingrese cuantos jugadores quiere meter en su equipo");
                             int cont = leer.nextInt();
+                            ArrayList jugadores = new ArrayList();
                             while (cont < 5 || cont > 13) {
                                 if (cont < 5) {
                                     System.out.println("Muy pocos jugadores");
@@ -135,12 +138,34 @@ public class Lab3_DavidReyes_IanLagos {
                                     System.out.println("Ingrese valor de posteo");
                                     posteo = leer.nextInt();
                                 }
-                                System.out.println("Que tipo de jugador sera");
+                                System.out.println("Que tipo de jugador sera:\n1.Base\n2.Escolta\n3.Alero\n4.Pivot\n5.Centro");
+                                int tij = leer.nextInt();
+                                double altura = 0;
+                                switch (tij) {
+                                    case 1:
+                                        altura = 1.93;
+                                        break;
+                                    case 2:
+                                        altura = 2.00;
+                                        break;
+                                    case 3:
+                                        altura = 2.05;
+                                        break;
+                                    case 4:
+                                        altura = 2.10;
+                                        break;
+                                    case 5:
+                                        altura =2.13;
+                                    default:
+                                        System.out.println("Opcion no valida");
+                                }
+                                jugadores.add(nombre,apellido,años,salario,camisa);
                             }
                             break;
                         default:
                             System.out.println("Opcion no valida");
                     }
+                    equipos.add(new Equipo(nombre, fecha, campeonatos,personal));
                     break;
                 case 2:
                     break;

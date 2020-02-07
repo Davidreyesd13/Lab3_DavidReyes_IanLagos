@@ -8,10 +8,11 @@ public class Equipo{
     private int numero_camp;
     private ArrayList personal = new ArrayList();
 
-    public Equipo(String nombre, String año_fund, int numero_camp) {
+    public Equipo(String nombre, String año_fund, int numero_camp,ArrayList personal) {
         this.nombre = nombre;
         this.año_fund = año_fund;
         this.numero_camp = numero_camp;
+        this.personal = personal;
     }
 
     public Equipo() {
