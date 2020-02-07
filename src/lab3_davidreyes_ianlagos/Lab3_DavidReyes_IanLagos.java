@@ -12,6 +12,8 @@ public class Lab3_DavidReyes_IanLagos {
             System.out.println("");
             opcion = leer.nextInt();
             switch (opcion) {
+                case 0:
+                    System.exit(0);
                 case 1:
 
                     break;
