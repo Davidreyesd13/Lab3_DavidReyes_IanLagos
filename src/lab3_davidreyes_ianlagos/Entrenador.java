@@ -9,20 +9,22 @@ package lab3_davidreyes_ianlagos;
  *
  * @author ian
  */
-public class Entrenador {
+public class Entrenador extends Persona{
 
     private String exjugador_sn;
     private Jugadas jugadas_fav;
-    protected String tipo_entrenador;
+    
 
     public Entrenador() {
     }
 
-    public Entrenador(String exjugador_sn, Jugadas jugadas_fav, String tipo_entrenador) {
+    public Entrenador(String exjugador_sn, Jugadas jugadas_fav, String nombre, String apellido, String Años_profecionales, double salario) {
+        super(nombre, apellido, Años_profecionales, salario);
         this.exjugador_sn = exjugador_sn;
         this.jugadas_fav = jugadas_fav;
-        this.tipo_entrenador = tipo_entrenador;
     }
+    
+   
 
     public String getExjugador_sn() {
         return exjugador_sn;
@@ -40,12 +42,5 @@ public class Entrenador {
         this.jugadas_fav = jugadas_fav;
     }
 
-    public String getTipo_entrenador() {
-        return tipo_entrenador;
-    }
-
-    public void setTipo_entrenador(String tipo_entrenador) {
-        this.tipo_entrenador = tipo_entrenador;
-    }
     
 }
