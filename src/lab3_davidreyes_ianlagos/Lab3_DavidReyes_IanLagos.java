@@ -1,21 +1,31 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package lab3_davidreyes_ianlagos;
 
-/**
- *
- * @author david
- */
+import java.util.Scanner;
+
 public class Lab3_DavidReyes_IanLagos {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        int opcion;
+
+        Scanner leer = new Scanner(System.in);
+        while (true) {
+            System.out.println("");
+            opcion = leer.nextInt();
+            switch (opcion) {
+                case 1:
+
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                default:
+                    System.out.println("Opcion no valida");
+            }
+        }
+
     }
-    
+
 }
