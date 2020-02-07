@@ -32,6 +32,11 @@ public class Persona {
         this.salario = salario;
     }
 
+    @Override
+    public String toString() {
+        return "Persona{" + "nombre=" + nombre + ", apellido=" + apellido + ", Años_profecionales=" + Años_profecionales + ", salario=" + salario + ", Jugador=" + Jugador + ", medico=" + medico + ", Dueño_equipo=" + Dueño_equipo + ", entrendadores=" + entrendadores + '}';
+    }
+
     public String getNombre() {
         return nombre;
     }

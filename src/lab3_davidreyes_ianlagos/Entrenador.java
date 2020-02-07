@@ -41,5 +41,10 @@ public class Entrenador extends Persona{
         this.jugadas_fav = jugadas_fav;
     }
 
+    @Override
+    public String toString() {
+        return "Entrenador{" + "exjugador_sn=" + exjugador_sn + ", jugadas_fav=" + jugadas_fav + '}';
+    }
+
     
 }

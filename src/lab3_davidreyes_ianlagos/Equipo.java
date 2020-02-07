@@ -49,6 +49,11 @@ public class Equipo{
     public void setPersonal(ArrayList personal) {
         this.personal = personal;
     }
+
+    @Override
+    public String toString() {
+        return "Equipo{" + "nombre=" + nombre + ", a\u00f1o_fund=" + año_fund + ", numero_camp=" + numero_camp + ", personal=" + personal + '}';
+    }
     
             
 }
