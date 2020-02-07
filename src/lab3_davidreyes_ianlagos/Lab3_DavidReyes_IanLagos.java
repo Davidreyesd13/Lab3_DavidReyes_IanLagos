@@ -159,7 +159,7 @@ public class Lab3_DavidReyes_IanLagos {
                                     default:
                                         System.out.println("Opcion no valida");
                                 }
-                                jugadores.add(nombre,apellido,años,salario,camisa);
+                               // jugadores.add(nombre,apellido,años,salario,camisa);
                             }
                             break;
                         default:
