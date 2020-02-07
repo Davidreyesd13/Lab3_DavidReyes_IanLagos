@@ -31,9 +31,7 @@ public class Jugador extends Persona {
         this.Posteo = Posteo;
         this.altura = altura;
     }
-
     
-
     public int getNumero_camisa() {
         return numero_camisa;
     }
