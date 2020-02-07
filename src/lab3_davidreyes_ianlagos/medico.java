@@ -7,8 +7,13 @@ package lab3_davidreyes_ianlagos;
 
 
 public class medico {
-    private String colegio;
+    protected String colegio;
 
+    public medico(String colegio) {
+        this.colegio = colegio;
+        
+    }
+    
     public String getColegio() {
         return colegio;
     }

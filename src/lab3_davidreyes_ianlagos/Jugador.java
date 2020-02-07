@@ -16,7 +16,7 @@ public class Jugador {
     private int Pases;
     private int Posteo;
     private int altura;
-
+    
     public Jugador() {
     }
 

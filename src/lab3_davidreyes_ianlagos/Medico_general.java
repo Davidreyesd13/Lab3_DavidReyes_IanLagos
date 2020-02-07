@@ -11,7 +11,14 @@ package lab3_davidreyes_ianlagos;
  */
 public class Medico_general extends medico{
     protected int enfermedades_curadas;
+    protected String colegio;
 
+    public Medico_general(int enfermedades_curadas, String colegio) {
+        super(colegio);
+        this.enfermedades_curadas = enfermedades_curadas;
+    }
+    
+   
     public int getEnfermedades_curadas() {
         return enfermedades_curadas;
     }

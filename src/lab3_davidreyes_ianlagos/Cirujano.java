@@ -9,9 +9,15 @@ package lab3_davidreyes_ianlagos;
  *
  * @author ian
  */
-public class Cirujano extends medico {
-    private int numero_ciru;
+public class Cirujano extends medico{
+    protected int numero_ciru;
+    protected String colegio;
 
+    public Cirujano(int numero_ciru, String colegio) {
+        super(colegio);
+        this.numero_ciru = numero_ciru;
+    }
+    
     public int getNumero_ciru() {
         return numero_ciru;
     }
