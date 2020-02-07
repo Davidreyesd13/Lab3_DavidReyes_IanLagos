@@ -1,5 +1,6 @@
 package lab3_davidreyes_ianlagos;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Lab3_DavidReyes_IanLagos {
@@ -7,16 +8,139 @@ public class Lab3_DavidReyes_IanLagos {
     public static void main(String[] args) {
 
         int opcion;
-
         Scanner leer = new Scanner(System.in);
         while (true) {
-            System.out.println("");
+            System.out.println("0.Salir"
+                    + "\n1.creacion de equipo"
+                    + "\n2.Modificacion\n3.Eliminacion"
+                    + "\n4.Agentes libres\n5.Comprar Jugador\n6.Despedir\n7.Simulacion");
             opcion = leer.nextInt();
             switch (opcion) {
                 case 0:
                     System.exit(0);
                 case 1:
-
+                    System.out.println("Ingrese Nombre de equipo");
+                    String nombre = leer.next();
+                    System.out.println("Ingrese fecha de creacion");
+                    String fecha = leer.next();
+                    System.out.println("Ingrese numero de campeonatos");
+                    int campeonatos = leer.nextInt();
+                    System.out.println("1.Agregar jugadores\n2.Agregar Medico\n3.Agregar Entrenador\n4.Agregar dueño");
+                    int persona = leer.nextInt();
+                    switch (persona) {
+                        case 1:
+                            System.out.println("Ingrese cuantos jugadores quiere meter en su equipo");
+                            int cont = leer.nextInt();
+                            while (cont < 5 || cont > 13) {
+                                if (cont < 5) {
+                                    System.out.println("Muy pocos jugadores");
+                                } else if (cont > 13) {
+                                    System.out.println("Muchos jugadores");
+                                }
+                                System.out.println("Ingrese jugadores minimo 5 y maximo 13");
+                                cont = leer.nextInt();
+                            }
+                            for (int i = 0; i < cont; i++) {
+                                System.out.println("Ingrese nombre de jugador");
+                                nombre = leer.next();
+                                System.out.println("Ingrese Apellido");
+                                String apellido = leer.next();
+                                System.out.println("Años profesionles");
+                                int años = leer.nextInt();
+                                System.out.println("Ingrese el salario");
+                                double salario = leer.nextDouble();
+                                System.out.println("Ingrese numero de camisa");
+                                int camisa = leer.nextInt();
+                                System.out.println("Ingrese valor de tiro de 3");
+                                int tiro3 = leer.nextInt();
+                                if (tiro3 < 0) {
+                                    System.out.println("No se puede menores que 0");
+                                    System.out.println("Ingrese valor de tiro de 3");
+                                    tiro3 = leer.nextInt();
+                                    
+                                }else if(tiro3>99){
+                                    System.out.println("No se puede un numero mayor de 99");
+                                    System.out.println("Ingrese valor de tiro de 3");
+                                    tiro3 = leer.nextInt();
+                                }
+                                System.out.println("Ingrese valor de defensa");
+                                int def = leer.nextInt();
+                                if (def < 0) {
+                                    System.out.println("No se puede menores que 0");
+                                    System.out.println("Ingrese valor de defensa");
+                                    def = leer.nextInt();
+                                    
+                                }else if(def>99){
+                                    System.out.println("No se puede un numero mayor de 99");
+                                    System.out.println("Ingrese valor de defensa");
+                                    def = leer.nextInt();
+                                }
+                                System.out.println("Ingrese valor de tiro de media");
+                                int media = leer.nextInt();
+                                if (media < 0) {
+                                    System.out.println("No se puede menores que 0");
+                                    System.out.println("Ingrese valor de media");
+                                    media = leer.nextInt();
+                                    
+                                }else if(media>99){
+                                    System.out.println("No se puede un numero mayor de 99");
+                                    System.out.println("Ingrese valor de media");
+                                    media = leer.nextInt();
+                                }
+                                System.out.println("Ingrese valor de rebote");
+                                int rebote = leer.nextInt();
+                                if (rebote < 0) {
+                                    System.out.println("No se puede menores que 0");
+                                    System.out.println("Ingrese valor de rebote");
+                                    rebote = leer.nextInt();
+                                    
+                                }else if(def>99){
+                                    System.out.println("No se puede un numero mayor de 99");
+                                    System.out.println("Ingrese valor de rebote");
+                                    rebote = leer.nextInt();
+                                }
+                                System.out.println("Ingrese valor de bandeja");
+                                int bandeja = leer.nextInt();
+                                if (bandeja < 0) {
+                                    System.out.println("No se puede menores que 0");
+                                    System.out.println("Ingrese valor de bandeja");
+                                    bandeja = leer.nextInt();
+                                    
+                                }else if(bandeja>99){
+                                    System.out.println("No se puede un numero mayor de 99");
+                                    System.out.println("Ingrese valor de bandeja");
+                                    bandeja = leer.nextInt();
+                                }
+                                System.out.println("Ingrese valor de pases");
+                                int pases = leer.nextInt();
+                                if (pases < 0) {
+                                    System.out.println("No se puede menores que 0");
+                                    System.out.println("Ingrese valor de pases");
+                                    pases = leer.nextInt();
+                                    
+                                }else if(pases>99){
+                                    System.out.println("No se puede un numero mayor de 99");
+                                    System.out.println("Ingrese valor de pases");
+                                    pases = leer.nextInt();
+                                }
+                                System.out.println("Ingrese valor de posteo");
+                                int posteo = leer.nextInt();
+                                if (posteo < 0) {
+                                    System.out.println("No se puede menores que 0");
+                                    System.out.println("Ingrese valor de posteo");
+                                    posteo= leer.nextInt();
+                                    
+                                }else if(posteo>99){
+                                    System.out.println("No se puede un numero mayor de 99");
+                                    System.out.println("Ingrese valor de posteo");
+                                    posteo = leer.nextInt();
+                                }
+                                System.out.println("Que tipo de jugador sera");
+                            }
+                            break;
+                        default:
+                            System.out.println("Opcion no valida");
+                    }
                     break;
                 case 2:
                     break;
