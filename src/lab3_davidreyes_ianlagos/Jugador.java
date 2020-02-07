@@ -5,7 +5,7 @@
  */
 package lab3_davidreyes_ianlagos;
 
-public class Jugador {
+public class Jugador extends Persona {
 
     private int numero_camisa;
     private int tiro_de_3;
@@ -15,12 +15,12 @@ public class Jugador {
     private int Bandeja;
     private int Pases;
     private int Posteo;
-    private int altura;
-    
+
     public Jugador() {
     }
 
-    public Jugador(int numero_camisa, int tiro_de_3, int defensa, int tiro_media, int rebote, int Bandeja, int Pases, int Posteo, int altura) {
+    public Jugador(int numero_camisa, int tiro_de_3, int defensa, int tiro_media, int rebote, int Bandeja, int Pases, int Posteo, String nombre, String apellido, String Años_profecionales) {
+        super(nombre, apellido, Años_profecionales);
         this.numero_camisa = numero_camisa;
         this.tiro_de_3 = tiro_de_3;
         this.defensa = defensa;
@@ -29,7 +29,7 @@ public class Jugador {
         this.Bandeja = Bandeja;
         this.Pases = Pases;
         this.Posteo = Posteo;
-        this.altura = altura;
+
     }
 
     public int getNumero_camisa() {
@@ -96,13 +96,4 @@ public class Jugador {
         this.Posteo = Posteo;
     }
 
-    public int getAltura() {
-        return altura;
-    }
-
-    public void setAltura(int altura) {
-        this.altura = altura;
-    }
-    
-    
 }

@@ -6,13 +6,17 @@
 package lab3_davidreyes_ianlagos;
 
 
-public class medico {
+public class medico extends Persona{
     protected String colegio;
 
-    public medico(String colegio) {
+    public medico(String colegio, String nombre, String apellido, String Años_profecionales, double salario) {
+        super(nombre, apellido, Años_profecionales, salario);
         this.colegio = colegio;
-        
     }
+
+    
+
+    
     
     public String getColegio() {
         return colegio;

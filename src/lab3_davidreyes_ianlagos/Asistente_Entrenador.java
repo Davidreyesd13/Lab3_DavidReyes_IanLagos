@@ -10,9 +10,13 @@ package lab3_davidreyes_ianlagos;
  * @author ian
  */
 public class Asistente_Entrenador extends Entrenador{
-
+    private double salario =1000000;
     public Asistente_Entrenador(String exjugador_sn, Jugadas jugadas_fav, String nombre, String apellido, String Años_profecionales, double salario) {
-        super(exjugador_sn, jugadas_fav, nombre, apellido, Años_profecionales, 1000000);
+        super(exjugador_sn, jugadas_fav, nombre, apellido, Años_profecionales);
+        this.salario = salario;
+        
     }
+    
+    
     
 }
