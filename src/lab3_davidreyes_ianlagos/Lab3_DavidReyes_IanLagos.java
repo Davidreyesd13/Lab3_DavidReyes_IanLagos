@@ -32,7 +32,7 @@ public class Lab3_DavidReyes_IanLagos {
                     switch (persona) {
                         case 1:
                             System.out.println("Ingrese cuantos jugadores quiere meter en su equipo");
-                            int cont = leer.nextInt();                           
+                            int cont = leer.nextInt();
                             while (cont < 5 || cont > 13) {
                                 if (cont < 5) {
                                     System.out.println("Muy pocos jugadores");
@@ -158,9 +158,47 @@ public class Lab3_DavidReyes_IanLagos {
                                     default:
                                         System.out.println("Opcion no valida");
                                 }
+
                                 personal.add(new Persona(nombre, apellido, años, salario).getJugador().add(new Jugador(camisa, tiro3, def, media, rebote, bandeja, pases, posteo, altura, nombre, apellido, años, salario)));
                             }
                             break;
+                        case 2:
+                            System.out.print("ingrese nombre del medico: ");
+                            String nom_medic = leer.next();
+                            System.out.print("ingrese apellido medico: ");
+                            String ape_medic = leer.next();
+                            System.out.print("ingrese años profecionales: ");
+                            String años_medic = leer.next();
+                            System.out.print("Ingrese salario");
+                            double sal_medic = leer.nextDouble();
+                            System.out.println("1= medico general");
+                            System.out.println("2= cirujano");
+                            System.out.println("3= terapeuta");
+                            System.out.print("ingrese tipo de medico: ");
+                            int opc_medic = leer.nextInt();
+                            String tipo_medic = "";
+                            switch (opc_medic) {
+                                case 1:
+                                    tipo_medic = "medico general";
+                                    break;
+                                case 2:
+                                    tipo_medic = "cirujano";
+                                    break;
+                                case 3:
+                                    tipo_medic = "terapeuta";
+                                    break;
+                            }
+                            break;
+                        case 3:
+                            System.out.print("ingrese nombre del medico: ");
+                            String nom_dueño = leer.next();
+                            System.out.print("ingrese apellido medico: ");
+                            String ape_dueño = leer.next();
+                            System.out.print("ingrese años profecionales: ");
+                            String años_dueño = leer.next();
+                            System.out.print("ingrese Net worth: ");
+                            break;
+                        
                         default:
                             System.out.println("Opcion no valida");
                     }
