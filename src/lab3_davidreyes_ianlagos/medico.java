@@ -25,5 +25,10 @@ public class medico extends Persona{
     public void setColegio(String colegio) {
         this.colegio = colegio;
     }
+
+    @Override
+    public String toString() {
+        return "medico{" + "colegio=" + colegio + '}';
+    }
     
 }

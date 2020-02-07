@@ -17,5 +17,10 @@ public class Entrenador_principal extends Entrenador{
         this.salario = salario;
     }
 
+    @Override
+    public String toString() {
+        return "Entrenador_principal{" + "salario=" + salario + '}';
+    }
+
     
 }

@@ -13,8 +13,8 @@ public class Lab3_DavidReyes_IanLagos {
         while (true) {
             System.out.println("0.Salir"
                     + "\n1.creacion de equipo"
-                    + "\n2.Modificacion\n3.Eliminacion"
-                    + "\n4.Agentes libres\n5.Comprar Jugador\n6.Despedir\n7.Simulacion");
+                    + "\n2.Modificacion\n3.Despedir"
+                    + "\n4.Agentes libres\n5.Comprar Jugador\n6.Simulacion");
             opcion = leer.nextInt();
             switch (opcion) {
                 case 0:
@@ -217,6 +217,7 @@ public class Lab3_DavidReyes_IanLagos {
                             System.out.println("3 = Preparador fisico");
                             System.out.println("ingrese tipo de entrenador");
                             int tipo_entre = leer.nextInt();
+
                             break;
                         default:
                             System.out.println("Opcion no valida");

@@ -10,6 +10,11 @@ public class Terapeuta extends medico {
         this.num_terap = num_terap;
     }
 
+    @Override
+    public String toString() {
+        return "Terapeuta{" + "num_terap=" + num_terap + ", colegio=" + colegio + '}';
+    }
+
     
 
     public int getNum_terap() {

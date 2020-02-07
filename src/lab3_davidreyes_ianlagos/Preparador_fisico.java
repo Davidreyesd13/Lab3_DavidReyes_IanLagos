@@ -14,4 +14,9 @@ public class Preparador_fisico extends Entrenador {
         this.salario = salario;
     }
 
+    @Override
+    public String toString() {
+        return "Preparador_fisico{" + "salario=" + salario + '}';
+    }
+
 }

@@ -19,6 +19,11 @@ public class Jugador extends Persona {
     public Jugador() {
     }
 
+    @Override
+    public String toString() {
+        return "Jugador{" + "numero_camisa=" + numero_camisa + ", tiro_de_3=" + tiro_de_3 + ", defensa=" + defensa + ", tiro_media=" + tiro_media + ", rebote=" + rebote + ", Bandeja=" + Bandeja + ", Pases=" + Pases + ", Posteo=" + Posteo + ", altura=" + altura + '}';
+    }
+
     public Jugador(int numero_camisa, int tiro_de_3, int defensa, int tiro_media, int rebote, int Bandeja, int Pases, int Posteo, double altura, String nombre, String apellido, String Años_profecionales, double salario) {
         super(nombre, apellido, Años_profecionales, salario);
         this.numero_camisa = numero_camisa;

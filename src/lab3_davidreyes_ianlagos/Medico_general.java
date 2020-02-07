@@ -25,5 +25,10 @@ public class Medico_general extends medico{
     public void setEnfermedades_curadas(int enfermedades_curadas) {
         this.enfermedades_curadas = enfermedades_curadas;
     }
+
+    @Override
+    public String toString() {
+        return "Medico_general{" + "enfermedades_curadas=" + enfermedades_curadas + ", colegio=" + colegio + '}';
+    }
     
 }

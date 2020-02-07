@@ -27,5 +27,10 @@ public class Cirujano extends medico{
     public void setNumero_ciru(int numero_ciru) {
         this.numero_ciru = numero_ciru;
     }
+
+    @Override
+    public String toString() {
+        return "Cirujano{" + "numero_ciru=" + numero_ciru + ", colegio=" + colegio + '}';
+    }
     
 }

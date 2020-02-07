@@ -33,5 +33,10 @@ public class Dueño_equipo {
     public void setNacimiento(String nacimiento) {
         this.nacimiento = nacimiento;
     }
+
+    @Override
+    public String toString() {
+        return "Due\u00f1o_equipo{" + "net_worth=" + net_worth + ", nacimiento=" + nacimiento + '}';
+    }
     
 }
