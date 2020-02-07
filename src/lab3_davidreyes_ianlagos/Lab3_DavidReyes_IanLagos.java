@@ -48,7 +48,7 @@ public class Lab3_DavidReyes_IanLagos {
                                 System.out.println("Ingrese Apellido");
                                 String apellido = leer.next();
                                 System.out.println("Años profesionles");
-                                int años = leer.nextInt();
+                                String años = leer.next();
                                 System.out.println("Ingrese el salario");
                                 double salario = leer.nextDouble();
                                 System.out.println("Ingrese numero de camisa");
@@ -158,7 +158,7 @@ public class Lab3_DavidReyes_IanLagos {
                                     default:
                                         System.out.println("Opcion no valida");
                                 }
-                                // jugadores.add(nombre,apellido,años,salario,camisa);
+                                personal.add(new Persona(nombre, apellido, años, salario).getJugador().add(new Jugador(camisa, tiro3, def, media, rebote, bandeja, pases, posteo, altura, nombre, apellido, años, salario)));
                             }
                             break;
                         default:
