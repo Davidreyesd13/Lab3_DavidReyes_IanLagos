@@ -188,17 +188,36 @@ public class Lab3_DavidReyes_IanLagos {
                                     tipo_medic = "terapeuta";
                                     break;
                             }
+                            personal.add(new Persona(nombre, ape_medic, años_medic, sal_medic).getMedico().add(new medico(nom_medic, nombre, ape_medic, años_medic, sal_medic)));
                             break;
                         case 3:
-                            System.out.print("ingrese nombre del medico: ");
+                            System.out.print("ingrese nombre del dueño: ");
                             String nom_dueño = leer.next();
-                            System.out.print("ingrese apellido medico: ");
+                            System.out.print("ingrese apellido dueño: ");
                             String ape_dueño = leer.next();
                             System.out.print("ingrese años profecionales: ");
                             String años_dueño = leer.next();
                             System.out.print("ingrese Net worth: ");
+                            double nw_dueño = leer.nextDouble();
+                            System.out.print("ingrese lugar donde nacio: ");
+                            String lug_nac = leer.nextLine();
+                            personal.add(new Persona(nombre, ape_dueño, años_dueño).getDueño_equipo().add(new Dueño_equipo(nw_dueño, nom_dueño)));
                             break;
-                        
+                        case 4:
+                            System.out.print("ingrese nombre del Entrenador: ");
+                            String nom_entre = leer.next();
+                            System.out.print("ingrese apellido del Entrenador: ");
+                            String ape_entre = leer.next();
+                            System.out.print("ingrese años profecionales: ");
+                            String años_entre = leer.next();
+                            System.out.println("usted fue jugador si/no: ");
+                            String ex_jug = leer.next();
+                            System.out.println("1 = entrenador principal");
+                            System.out.println("2 = asistente entrenador ");
+                            System.out.println("3 = Preparador fisico");
+                            System.out.println("ingrese tipo de entrenador");
+                            int tipo_entre = leer.nextInt();
+                            break;
                         default:
                             System.out.println("Opcion no valida");
                     }
