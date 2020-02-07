@@ -18,14 +18,13 @@ public class Entrenador extends Persona{
     public Entrenador() {
     }
 
-    public Entrenador(String exjugador_sn, Jugadas jugadas_fav, String nombre, String apellido, String Años_profecionales, double salario) {
-        super(nombre, apellido, Años_profecionales, salario);
+    public Entrenador(String exjugador_sn, Jugadas jugadas_fav, String nombre, String apellido, String Años_profecionales) {
+        super(nombre, apellido, Años_profecionales);
         this.exjugador_sn = exjugador_sn;
         this.jugadas_fav = jugadas_fav;
     }
-    
-   
 
+    
     public String getExjugador_sn() {
         return exjugador_sn;
     }

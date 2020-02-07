@@ -13,10 +13,12 @@ public class Cirujano extends medico{
     protected int numero_ciru;
     protected String colegio;
 
-    public Cirujano(int numero_ciru, String colegio) {
-        super(colegio);
+    public Cirujano(int numero_ciru, String colegio, String nombre, String apellido, String Años_profecionales, double salario) {
+        super(colegio, nombre, apellido, Años_profecionales, salario);
         this.numero_ciru = numero_ciru;
     }
+
+   
     
     public int getNumero_ciru() {
         return numero_ciru;

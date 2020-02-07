@@ -5,11 +5,13 @@
  */
 package lab3_davidreyes_ianlagos;
 
+public class Preparador_fisico extends Entrenador {
 
-public class Preparador_fisico extends Entrenador{
+    private double salario = 800000;
 
     public Preparador_fisico(String exjugador_sn, Jugadas jugadas_fav, String nombre, String apellido, String Años_profecionales, double salario) {
-        super(exjugador_sn, jugadas_fav, nombre, apellido, Años_profecionales, 800000);
+        super(exjugador_sn, jugadas_fav, nombre, apellido, Años_profecionales);
+        this.salario = salario;
     }
-    
+
 }

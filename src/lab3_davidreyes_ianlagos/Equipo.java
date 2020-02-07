@@ -6,7 +6,7 @@ public class Equipo{
     private String nombre;
     private String año_fund;
     private int numero_camp;
-    private ArrayList personal = new ArrayList();
+    private ArrayList<Persona> personal = new ArrayList();
 
     public Equipo(String nombre, String año_fund, int numero_camp,ArrayList personal) {
         this.nombre = nombre;

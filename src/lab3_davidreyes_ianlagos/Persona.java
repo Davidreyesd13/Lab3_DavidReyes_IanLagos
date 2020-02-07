@@ -19,6 +19,12 @@ public class Persona {
     public Persona() {
     }
 
+    public Persona(String nombre, String apellido, String Años_profecionales) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.Años_profecionales = Años_profecionales;
+    }
+    
     public Persona(String nombre, String apellido, String Años_profecionales, double salario) {
         this.nombre = nombre;
         this.apellido = apellido;
