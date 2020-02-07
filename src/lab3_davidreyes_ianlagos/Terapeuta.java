@@ -5,16 +5,19 @@
  */
 package lab3_davidreyes_ianlagos;
 
+/**
+ *
+ * @author ian
+ */
+public class Terapeuta extends medico{
+    private int num_terap;
 
-public class medico {
-    private String colegio;
-
-    public String getColegio() {
-        return colegio;
+    public int getNum_terap() {
+        return num_terap;
     }
 
-    public void setColegio(String colegio) {
-        this.colegio = colegio;
+    public void setNum_terap(int num_terap) {
+        this.num_terap = num_terap;
     }
     
 }

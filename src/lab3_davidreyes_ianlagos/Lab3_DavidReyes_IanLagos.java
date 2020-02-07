@@ -6,10 +6,6 @@ public class Lab3_DavidReyes_IanLagos {
 
     
     public static void main(String[] args) {
-        char resp='s';
-        while (resp=='s' || resp=='S') {
-            
-        }
+        
     }
-    
 }

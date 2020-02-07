@@ -5,12 +5,17 @@
  */
 package lab3_davidreyes_ianlagos;
 
+import java.util.ArrayList;
+
 public class Persona {
     private String nombre;
     private String apellido;
     private String Años_profecionales;
     private double salario;
-
+    private ArrayList Jugador = new ArrayList();
+    private ArrayList medico = new ArrayList();
+    private ArrayList Dueño_equipo = new ArrayList();
+    private ArrayList entrendadores = new ArrayList();
     public Persona() {
     }
 
@@ -51,6 +56,38 @@ public class Persona {
 
     public void setSalario(double salario) {
         this.salario = salario;
+    }
+
+    public ArrayList getJugador() {
+        return Jugador;
+    }
+
+    public void setJugador(ArrayList Jugador) {
+        this.Jugador = Jugador;
+    }
+
+    public ArrayList getMedico() {
+        return medico;
+    }
+
+    public void setMedico(ArrayList medico) {
+        this.medico = medico;
+    }
+
+    public ArrayList getDueño_equipo() {
+        return Dueño_equipo;
+    }
+
+    public void setDueño_equipo(ArrayList Dueño_equipo) {
+        this.Dueño_equipo = Dueño_equipo;
+    }
+
+    public ArrayList getEntrendadores() {
+        return entrendadores;
+    }
+
+    public void setEntrendadores(ArrayList entrendadores) {
+        this.entrendadores = entrendadores;
     }
     
 }
