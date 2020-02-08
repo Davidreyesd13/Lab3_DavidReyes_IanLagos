@@ -35,7 +35,7 @@ public class Lab3_DavidReyes_IanLagos {
                             String nom_jug = leer.next();
                             System.out.println("ingrese el porcentaje: ");
                             double porcen = leer.nextDouble();
-                            jugadas_fav.add(new Jugadas(nom_jug,porcen));
+                            jugadas_fav.add(new Jugadas(nom_jug, porcen));
                             break;
                         case 1:
                             System.out.println("Ingrese cuantos jugadores quiere meter en su equipo");
@@ -219,8 +219,7 @@ public class Lab3_DavidReyes_IanLagos {
                             String años_entre = leer.next();
                             System.out.println("usted fue jugador si/no: ");
                             String ex_jug = leer.next();
-                            
-                            
+
                             System.out.println("1 = entrenador principal");
                             System.out.println("2 = asistente entrenador ");
                             System.out.println("3 = Preparador fisico");
@@ -228,7 +227,7 @@ public class Lab3_DavidReyes_IanLagos {
                             int tipo_entre = leer.nextInt();
                             switch (tipo_entre) {
                                 case 1:
-                                    int contjug =0;
+                                    int contjug = 0;
                                     for (Jugadas jo : jugadas_fav) {
                                         System.out.print(contjug);
                                         System.out.println(jo);
@@ -239,7 +238,7 @@ public class Lab3_DavidReyes_IanLagos {
                                     personal.add(new Persona(nom_entre, ape_entre, años_entre).getEntrendadores().add(new Entrenador_principal(ex_jug, jugadas_fav.get(opc_jug), nombre, ape_entre, años_entre, 2000000)));
                                     break;
                                 case 2:
-                                     contjug =0;
+                                    contjug = 0;
                                     for (Jugadas jo : jugadas_fav) {
                                         System.out.print(contjug);
                                         System.out.println(jo);
@@ -247,9 +246,18 @@ public class Lab3_DavidReyes_IanLagos {
                                     }
                                     System.out.println("elija su favorita: ");
                                     opc_jug = leer.nextInt();
+                                    personal.add(new Persona(nom_entre, ape_entre, años_entre).getEntrendadores().add(new Asistente_Entrenador(ex_jug, jugadas_fav.get(opc_jug), nom_entre, ape_entre, años_entre, 1000000)));
                                     break;
                                 case 3:
-                                    
+                                    contjug = 0;
+                                    for (Jugadas jo : jugadas_fav) {
+                                        System.out.print(contjug);
+                                        System.out.println(jo);
+                                        contjug++;
+                                    }
+                                    System.out.println("elija su favorita: ");
+                                    opc_jug = leer.nextInt();
+                                    personal.add(new Persona(nom_entre, ape_entre, años_entre).getEntrendadores().add(new Preparador_fisico(ex_jug, jugadas_fav.get(opc_jug), nom_entre, ape_entre, años_entre, 800000)));
                                     break;
                             }
                             break;
@@ -261,6 +269,35 @@ public class Lab3_DavidReyes_IanLagos {
                 case 2:
                     break;
                 case 3:
+                    System.out.println("1 = jugador");
+                    System.out.println("2 = medico ");
+                    System.out.println("3 = entrenador");
+                    System.out.println("ingrese a quien decea eliminar");
+                    int opc_elim_gen = leer.nextInt();
+                    switch (opc_elim_gen) {
+                        case 1:
+                            for (int i = 0; i < equipos.size(); i++) {
+                                if (((Jugador)equipos.get(i).getPersonal().get(i)) instanceof Jugador) {
+                                    System.out.println((Jugador)equipos.get(i).getPersonal().get(i));
+                                    
+                                }
+                            }
+                            break;
+                        case 2:
+                            for (int i = 0; i < equipos.size(); i++) {
+                                if (((medico)equipos.get(i).getPersonal().get(i)) instanceof medico) {
+                                    System.out.println((medico)equipos.get(i).getPersonal().get(i));
+                                }
+                            }
+                            break;
+                        case 3:
+                            for (int i = 0; i < equipos.size(); i++) {
+                                if (((Entrenador)equipos.get(i).getPersonal().get(i)) instanceof Entrenador) {
+                                    System.out.println((Entrenador)equipos.get(i).getPersonal().get(i));
+                                }
+                            }
+                            break;
+                    }
                     break;
                 case 4:
                     break;
