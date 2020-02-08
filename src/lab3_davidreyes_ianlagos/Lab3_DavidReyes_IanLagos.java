@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Lab3_DavidReyes_IanLagos {
 
     public static void main(String[] args) {
-
+        ArrayList<Jugadas> jugadas_fav = new ArrayList();
         int opcion;
         ArrayList<Equipo> equipos = new ArrayList();
         Scanner leer = new Scanner(System.in);
@@ -30,6 +30,13 @@ public class Lab3_DavidReyes_IanLagos {
                     System.out.println("1.Agregar jugadores\n2.Agregar Medico\n3.Agregar Entrenador\n4.Agregar dueño");
                     int persona = leer.nextInt();
                     switch (persona) {
+                        case 0:
+                            System.out.println("ingrese jugada: ");
+                            String nom_jug = leer.next();
+                            System.out.println("ingrese el porcentaje: ");
+                            double porcen = leer.nextDouble();
+                            jugadas_fav.add(new Jugadas(nom_jug,porcen));
+                            break;
                         case 1:
                             System.out.println("Ingrese cuantos jugadores quiere meter en su equipo");
                             int cont = leer.nextInt();
@@ -188,7 +195,7 @@ public class Lab3_DavidReyes_IanLagos {
                                     tipo_medic = "terapeuta";
                                     break;
                             }
-                            personal.add(new Persona(nombre, ape_medic, años_medic, sal_medic).getMedico().add(new medico(nom_medic, nombre, ape_medic, años_medic, sal_medic)));
+                            personal.add(new Persona(nom_medic, ape_medic, años_medic, sal_medic).getMedico().add(new medico(nom_medic, nombre, ape_medic, años_medic, sal_medic)));
                             break;
                         case 3:
                             System.out.print("ingrese nombre del dueño: ");
@@ -201,7 +208,7 @@ public class Lab3_DavidReyes_IanLagos {
                             double nw_dueño = leer.nextDouble();
                             System.out.print("ingrese lugar donde nacio: ");
                             String lug_nac = leer.nextLine();
-                            personal.add(new Persona(nombre, ape_dueño, años_dueño).getDueño_equipo().add(new Dueño_equipo(nw_dueño, nom_dueño)));
+                            personal.add(new Persona(nom_dueño, ape_dueño, años_dueño).getDueño_equipo().add(new Dueño_equipo(nw_dueño, nom_dueño)));
                             break;
                         case 4:
                             System.out.print("ingrese nombre del Entrenador: ");
@@ -212,12 +219,39 @@ public class Lab3_DavidReyes_IanLagos {
                             String años_entre = leer.next();
                             System.out.println("usted fue jugador si/no: ");
                             String ex_jug = leer.next();
+                            
+                            
                             System.out.println("1 = entrenador principal");
                             System.out.println("2 = asistente entrenador ");
                             System.out.println("3 = Preparador fisico");
                             System.out.println("ingrese tipo de entrenador");
                             int tipo_entre = leer.nextInt();
-
+                            switch (tipo_entre) {
+                                case 1:
+                                    int contjug =0;
+                                    for (Jugadas jo : jugadas_fav) {
+                                        System.out.print(contjug);
+                                        System.out.println(jo);
+                                        contjug++;
+                                    }
+                                    System.out.println("elija su favorita: ");
+                                    int opc_jug = leer.nextInt();
+                                    personal.add(new Persona(nom_entre, ape_entre, años_entre).getEntrendadores().add(new Entrenador_principal(ex_jug, jugadas_fav.get(opc_jug), nombre, ape_entre, años_entre, 2000000)));
+                                    break;
+                                case 2:
+                                     contjug =0;
+                                    for (Jugadas jo : jugadas_fav) {
+                                        System.out.print(contjug);
+                                        System.out.println(jo);
+                                        contjug++;
+                                    }
+                                    System.out.println("elija su favorita: ");
+                                    opc_jug = leer.nextInt();
+                                    break;
+                                case 3:
+                                    
+                                    break;
+                            }
                             break;
                         default:
                             System.out.println("Opcion no valida");
