@@ -278,22 +278,25 @@ public class Lab3_DavidReyes_IanLagos {
                         case 1:
                             for (int i = 0; i < equipos.size(); i++) {
                                 if (((Jugador)equipos.get(i).getPersonal().get(i)) instanceof Jugador) {
-                                    System.out.println((Jugador)equipos.get(i).getPersonal().get(i));
+                                    System.out.println(i+""+(Jugador)equipos.get(i).getPersonal().get(i));
                                     
                                 }
                             }
+                            System.out.println("ingrese a quien desea eliminar");
+                            int opc_elim_jug= leer.nextInt();
+                            equipos.remove(equipos.get(opc_elim_jug).getPersonal().get(opc_elim_jug));
                             break;
                         case 2:
                             for (int i = 0; i < equipos.size(); i++) {
                                 if (((medico)equipos.get(i).getPersonal().get(i)) instanceof medico) {
-                                    System.out.println((medico)equipos.get(i).getPersonal().get(i));
+                                    System.out.println(i+""+(medico)equipos.get(i).getPersonal().get(i));
                                 }
                             }
                             break;
                         case 3:
                             for (int i = 0; i < equipos.size(); i++) {
                                 if (((Entrenador)equipos.get(i).getPersonal().get(i)) instanceof Entrenador) {
-                                    System.out.println((Entrenador)equipos.get(i).getPersonal().get(i));
+                                    System.out.println(i+""+(Entrenador)equipos.get(i).getPersonal().get(i));
                                 }
                             }
                             break;
